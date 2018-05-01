@@ -1,6 +1,6 @@
-# Slides for 'Make Your Site Fast'
+# Slides for ⚡ 'Make Your Site Fast'
 
-https://coliff.github.io/mysf2018/
+https://coliff.github.io/mysf-2018/
 
 
 ## TODO
