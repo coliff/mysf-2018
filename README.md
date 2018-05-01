@@ -1,6 +1,4 @@
-# mysf2018
-
-Slides for Make Your Site Fast 2018
+# Slides for 'Make Your Site Fast'
 
 https://coliff.github.io/mysf2018/
 
