@@ -1,0 +1,778 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Make Your Sites Fast - Christian Oliff</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700">
+  <link rel="stylesheet" href="css/reveal.min.css">
+  <link rel="stylesheet" href="css/theme/black.min.css">
+  <link rel="stylesheet" href="lib/css/zenburn.css">
+  <script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+  </script>
+  <base target="_blank">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+  <link rel="icon" href="https://christianoliff.com/favicon.ico">
+  <!--[if IE]><script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script><![endif]-->
+  <style>
+    body,
+    .slides,
+    li {
+      font-family: roboto, Arial, Helvetica, sans-serif !important;
+      font-weight: 200 !important;
+      opacity: .99;
+    }
+
+    b {
+      font-weight: 400 !important;
+    }
+
+    a,
+    a:hover {
+      text-decoration: none;
+      transition: all .7s ease !important;
+      opacity: 1;
+    }
+
+    li {
+      margin-bottom: 12px !important;
+    }
+
+    .link {
+      opacity: .2
+    }
+
+    h1 {
+      font-size: 3em !important;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      text-transform: none !important;
+      font-weight: 400 !important;
+    }
+
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-weight: 200 !important;
+    }
+
+    section[data-vertical-align-top] {
+      top: 0 !important;
+    }
+
+    .reveal pre {
+      width: 99%;
+    }
+  </style>
+</head>
+
+<body class="bg-dark">
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- 2. WHO? -->
+      <section class="text-left">
+        <img src="img/coliff.png" class="float-left img-fluid border-0 mr-5 shadow" alt="co"> Make Your Sites
+        <i>Fast</i>
+        <small class="small text-white-50">Best Practises, Tips &amp; Tricks for High Performance Sites</small>
+        <div>
+          <small class="my-4">Christian Oliff
+            <a href="https://christianoliff.com" class="link">&gt;</a>
+          </small>
+
+        </div>
+        <small>
+          <a href="https://github.com/coliff" class="text-white-50  d-block">
+            <i class="fab fa-fw fa-github shadow-sm" aria-hidden="true"></i> GitHub</a>
+        </small>
+        <small>
+          <a href="https://twitter.com/christianoliff" class="text-white-50 d-block ml-4">
+            <i class="fab fa-fw fa-twitter shadow-sm" aria-hidden="true"></i> Twitter</a>
+        </small>
+      </section>
+
+
+      <section id="me">
+        <h1>👨‍💻 Me</h1>
+      </section>
+
+      <section>
+        <img src="img/map.png" class="img-fluid border-0 shadow-none bg-transparent" alt="Map">
+      </section>
+
+      <section>
+        <img src="img/map-me.png" class="img-fluid border-0 shadow-none bg-transparent" alt="Map">
+      </section>
+
+      <section>
+        <img src="img/alk-tech.jpg" class="img-fluid border-0 shadow" alt="ALK">
+      </section>
+
+      <section>
+        <img src="img/copilot.png" class="img-fluid border-0 shadow" width="780" alt="CoPilot">
+      </section>
+
+      <section id="me-os">
+        <h2>I ❤️ Open Source</h2>
+      </section>
+
+      <section>
+        <img src="img/html5boilerplate.png" class="img-fluid border-0 shadow" width="720" alt="H5BP">
+        <h6>
+          <a href="https://html5boilerplate.com/" class="text-muted small">
+            html5boilerplate.com
+          </a>
+        </h6>
+      </section>
+
+      <section>
+        <img src="img/getbootstrap.png" class="img-fluid border-0 shadow" width="720" alt="H5BP">
+        <h6>
+          <a href="https://getbootstrap.com/" class="text-muted small">
+            getbootstrap.com
+          </a>
+        </h6>
+      </section>
+
+      <section>
+        <img src="img/bootstrap-ie8.png" class="img-fluid border-0 shadow" width="720" alt="H5BP">
+        <h6>
+          <a href="https://coliff.github.io/bootstrap-ie8/" class="text-muted small">
+            coliff.github.io/bootstrap-ie8/
+          </a>
+        </h6>
+      </section>
+
+      <!-- 2. WHY? -->
+      <section id="why">
+        <h1>🤔 Why?</h1>
+      </section>
+
+      <section id="why-good">
+        <h2></h2>
+        <ul>
+          <li class="fragment fade-in">
+            <b>Yahoo increased traffic by 9%</b> for every 400ms of improvement</li>
+          <li class="fragment fade-in">
+            <b>Amazon increased revenue by 1%</b> for every 100ms of improvement</li>
+          <li class="fragment fade-in">Mozilla had
+            <b>60 million more Firefox downloads per year</b>, by making their pages 2.2 seconds faster</li>
+          <li class="fragment fade-in">
+            <b>Google take page-speed into account</b> when ranking</li>
+          <!-- Google have taken page speed in to consideration when ranking for desktop sites for a while, and will start with mobile soon. -->
+        </ul>
+        <!-- There's lots more stats on the web that back these facts up. If you care about your sites effectiveness, sales, download, customer satisfaction - then you'll want to make you site fast -->
+      </section>
+
+
+
+      <section id="why-bad">
+        <h2></h2>
+        <ul>
+          <li class="fragment fade-in">
+            A
+            <b>one second delay</b> in mobile load times can impact mobile conversions by
+            <b>up to 20%</b>
+            <a href="https://www.soasta.com/blog/spring-2017-online-retail-web-performance/" title="Source: SOASTA, The State of Online Retail Performance, April 2017."
+              class="link">&gt;</a>
+          </li>
+          <li class="fragment fade-in">
+            The BBC found they
+            <b>lost an additional 10% of users</b> for every additional second their site took to load.</li>
+          <li class="fragment fade-in">
+            DoubleClick by Google found
+            <b>53% of mobile site visits were abandoned</b> if a page took longer than 3 seconds to load.</li>
+        </ul>
+        <!-- TALK
+        If high performance is an asset, then poor performance is a liability. Here are a couple case studies where poor performance had a negative impact on business goals:
+        -->
+      </section>
+
+
+
+      <section id="images">
+        <h1>🖼️ Images</h1>
+      </section>
+
+      <section id="images-list" data-vertical-align-top>
+        <h4 class="text-muted">🖼️ Images</h4>
+        <ul>
+          <li class="fragment fade-in">
+            Optimise Images
+            <a href="https://imageoptim.com/mac" class="text-white-50 link">&gt;</a>
+            <small class="text-white-50" hidden> (JPG, PNG, GIF can all be losslessly optimised)</small>
+          </li>
+          <li class="fragment fade-in">
+            Use the correct file format for the type of image
+            <small class="text-white-50" hidden>JPG for photos,</small>
+          </li>
+          <li class="fragment fade-in">
+            Avoid PNG24 unless you need alpha transparency
+            <small class="text-white-50" hidden>JPG is usually 1/4 of the size</small>
+          </li>
+          <li class="fragment fade-in">
+            For icons/logos use SVG if possible
+          </li>
+          <li class="fragment fade-in">
+            Minify SVG files
+          </li>
+          <li class="fragment fade-in">
+            Consider using a CDN such as
+            <a href="https://cloudinary.com/">Cloudinary</a> or
+            <a href="https://cloudinary.com/">AWS CloudFront</a>
+          </li>
+          <li class="fragment fade-in">
+            Set background colour when using images as backgrounds
+            <a href="https://christianoliff.com/tests/performance-bg/"
+              class="text-white-50 link">&gt;</a>
+          </li>
+          <!-- Typically images account for 80% of page weight -->
+        </ul>
+      </section>
+
+
+      <section id="images-bg" data-vertical-align-top>
+        <h4 class="text-muted">🖼️ Images</h4>
+
+      </section>
+
+
+      <section id="images-example" data-vertical-align-top>
+        <h4 class="text-muted">🖼️ Images</h4>
+
+        <div class="container">
+          <div class="row mx-auto">
+            <div class="col">
+              <img src="img/1.PNG" class="border-0 fragment fade-in" height="270" alt="">
+            </div>
+            <div class="col">
+              <img src="img/2.PNG" class="border-0 fragment fade-in" height="270" alt="">
+            </div>
+            <div class="col">
+              <img src="img/3.PNG" class="border-0 fragment fade-in" height="270" alt="">
+            </div>
+            <div class="col">
+              <img src="img/4.PNG" class="border-0 fragment fade-in" height="270" alt="">
+            </div>
+            <div class="col">
+              <img src="img/5.PNG" class="border-0 fragment fade-in" height="270" alt="">
+            </div>
+
+          </div>
+          <div class="row mx-auto">
+            <div class="col">
+              <img src="img/6.PNG" class="border-0 fragment fade-in" height="270" alt="">
+            </div>
+            <div class="col">
+              <img src="img/7.PNG" class="border-0 fragment fade-in" height="270" alt="">
+            </div>
+            <div class="col">
+              <img src="img/8.PNG" class="border-0 fragment fade-in" height="270" alt="">
+            </div>
+            <div class="col">
+              <img src="img/9.PNG" class="border-0 fragment fade-in" height="270" alt="">
+            </div>
+            <div class="col">
+              <img src="img/10.PNG" class="border-0 fragment fade-in" height="270" alt="">
+            </div>
+
+          </div>
+        </div>
+
+      </section>
+
+
+      <section id="images-example-2" data-vertical-align-top>
+        <h4 class="text-muted">🖼️ Images</h4>
+
+        <div class="container">
+          <div class="row mx-auto">
+            <div class="col-4">
+              <img src="img/4.PNG" class="border-0 fragment fade-in" height="400" alt="">
+            </div>
+            <div class="col-8">
+              <ul class="float-left">
+                <li class="fragment fade-in">Original - 290 KB
+                  <br>
+                  <small class="text-muted">(PNG24) 640 x 1096</small>
+                </li>
+
+                <li class="fragment fade-in">Losslessly Optimise - 206 KB
+                  <br>
+                  <small class="text-muted">(PNG24) 640 x 1096</small>
+                </li>
+
+                <li class="fragment fade-in">Convert to 256 Color - 55 KB
+                  <br>
+                  <small class="text-muted">(PNG8) 640 x 1096</small>
+                </li>
+
+                <li class="fragment fade-in">Low-DPI version for PC - 31 KB
+                  <br>
+                  <small class="text-muted">(PNG8) 320 x 548</small>
+                </li>
+              </ul>
+
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+
+      <section id="images-example-3" data-vertical-align-top>
+        <h4 class="text-muted">🖼️ Images</h4>
+
+        <pre><code class="hljs markdown fragment fade-in">
+<img src="img/4.PNG" srcset="img/4@x2.png 2x" width="320" alt="">
+                 </code></pre>
+
+      </section>
+
+
+
+      <!--- CSS -->
+
+      <section id="css">
+        <h1>🖍️ CSS</h1>
+      </section>
+
+
+      <section id="css-minify" data-vertical-align-top>
+        <h4 class="text-muted">🖍️ CSS</h4>
+        <h3 class="fragment fade-in my-5">
+          Minify your CSS
+        </h3>
+
+        <pre><code class="hljs markdown fragment fade-in">
+<link rel="stylesheet" href="css/bootstrap.css">
+                     </code></pre>
+
+        <h5 class="mt-0 pt-0 mb-5 pb-5 fragment fade-in">
+          <a href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.js">169 KB</a> 😒</h5>
+
+        <pre><code class="hljs markdown fragment fade-in">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+                     </code></pre>
+        <h5 class="mt-0 pt-0 fragment fade-in">
+          <a href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js">138 KB</a> 🙂</h5>
+      </section>
+
+
+      <section id="css-avoid-imports" data-vertical-align-top>
+        <h4 class="text-muted">🖍️ CSS</h4>
+        <h3 class="fragment fade-in">
+          Avoid
+          <code>@imports</code>
+        </h3>
+        <pre><code class="hljs markdown fragment fade-in">
+@import url("navigation.css");
+         </code></pre>
+        <!-- TALK  -->
+      </section>
+
+
+
+      <!-- JS -->
+      <section id="javascript">
+        <h1>📜 JavaScript</h1>
+      </section>
+
+
+      <section id="javascript-remove" data-vertical-align-top>
+        <h4 class="text-muted">📜 JavaScript</h4>
+        <h4 class="fragment fade-in text-white-50 mt-5 mb-0">
+          Remove unneeded scripts
+        </h4>
+
+        <img src="img/bootstrap-template.png" class="fragment fade-in img-fluid border-0 shadow-none m-0 p-0 bg-transparent" width="780"
+          alt="template">
+        <!-- Might sound obvious, but I sometimes see the Bootstrap starter template and not using any JavaScript but loading it anyway because its on the template -->
+      </section>
+
+
+      <section id="javascript-minify" data-vertical-align-top>
+        <h4 class="text-muted">📜 JavaScript</h4>
+
+        <h4 class="fragment fade-in text-white-50 my-5">
+          Minify your scripts
+        </h4>
+
+        <pre><code class="hljs markdown fragment fade-in">
+<script src="js/bootstrap.js"></script>
+        </code></pre>
+
+        <h5 class="mt-0 pt-0 mb-5 pb-5 fragment fade-in">
+          <a href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.js">120 KB</a> 😒</h5>
+
+        <pre><code class="hljs markdown fragment fade-in">
+<script src="js/bootstrap.min.js"></script>
+         </code></pre>
+        <h5 class="mt-0 pt-0 fragment fade-in">
+          <a href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js">50 KB</a> 🙂</h5>
+      </section>
+
+
+      <section id="javascript-header" data-vertical-align-top>
+        <h4 class="text-muted">📜 JavaScript</h4>
+        <h4 class="fragment fade-in text-white-50 my-5">
+          Is each script needed for rendering the page?
+          <br> If not, move it to the footer
+        </h4>
+      </section>
+
+
+      <section id="javascript-cdn" data-vertical-align-top>
+        <h4 class="text-muted">📜 JavaScript</h4>
+        <h4 class="fragment fade-in text-white-50 my-5">
+          Use a CDN if possible
+          <a href="https://jsdelivr.com/" class="link">&gt;</a>
+        </h4>
+      </section>
+
+
+      <section id="javascript-combine">
+        <h4 class="text-muted">📜 JavaScript</h4>
+
+        <h4 class="fragment fade-in text-white-50 my-5">
+          Consider Combining scripts
+        </h4>
+
+        <pre><code class="hljs markdown fragment fade-in">
+<script src="/js/scripts.js"></script>
+<script src="/js/backbone.min.js"></script>
+<script src="/js-style-switcher/assets/js/frontend.js"></script>
+<script src="/js/frontend/add-to-cart.min.js"></script>
+<script src="/js/jquery-block-ui/jquery.blockUI.min.js"></script>
+<script src="/js/js-cookie/js.cookie.min.js"></script>
+<script src="/js/frontend/woo-commerce.min.js"></script>
+<script src="/js/frontend/cart-fragments.min.js"></script>
+<script src="/js/main.min.js"></script>
+<script src="/pt-preview-bar/assets/js/dist/main.js"></script>
+<script src="/js/wp-embed.min.js"></script>
+    </code></pre>
+      </section>
+
+
+
+
+
+      <!--- FONTS -->
+
+      <section id="fonts">
+        <h1>📓 Fonts</h1>
+      </section>
+
+      <section id="fonts-tips" data-vertical-align-top>
+        <h4 class="text-muted">📓 Fonts</h4>
+        <ul>
+          <li class="fragment fade-in">
+            Consider using the 'Native Font Stack'
+            <a href="https://bitsofco.de/the-new-system-font-stack/" title="" class="link">&gt;</a>
+            <!-- Used by Medium, GitHub, WordPress and Booking.com -->
+            <a href=""> </a>
+          </li>
+          <li class="fragment fade-in">
+            If you're serving your own fonts - make sure the WOFF2 file format is available
+            <!-- File sizes are 30% smaller -->
+          </li>
+          <li class="fragment fade-in">
+            Use Preconnect if loading Google Fonts
+            <pre><code class="hljs markdown fragment fade-in">
+<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+</code></pre>
+            <!-- Does DNS Lookup and displays font around 100ms faster -->
+          </li>
+        </ul>
+      </section>
+
+
+      <!-- VIDEO -->
+
+      <section id="video">
+        <h1>📹 Video</h1>
+      </section>
+
+
+      <section id="video-res" data-vertical-align-top>
+        <h4 class="text-muted">📹 Video</h4>
+        <ul>
+          <li class="fragment fade-in">
+            Use lower resolution video for background video effects
+            <a href="https://mileonapp.com/" class="link">&gt;</a>
+          </li>
+          <!--   -->
+        </ul>
+      </section>
+
+
+
+
+      <!-- CACHING -->
+
+      <section id="caching">
+        <h1>🗂️ Caching</h1>
+      </section>
+
+      <section id="caching-cache-life" data-vertical-align-top>
+        <h4 class="text-muted">🗂️ Caching</h4>
+        <ul>
+          <li class="fragment fade-in">
+            Set a long cache life for static assets
+            <br>
+            <small class="text-muted">(365 days recommended)</small>
+            <!--  -->
+          </li>
+          <li class="fragment fade-in">
+            Need to update a static asset?
+            <pre><code class="hljs markdown fragment fade-in">
+<script src="/js/scripts.js?v=2018-04-28"></script>
+             </code></pre>
+          </li>
+        </ul>
+
+      </section>
+
+
+
+      <!-- TOOLS -->
+
+      <section id="tools">
+        <h2>🔧 Speed Test Tools</h2>
+      </section>
+
+
+
+      <section id="lighthouse">
+        <h2>
+          Google Lighthouse
+        </h2>
+        <img src="img/lighthouse.png" class="text-center img-fluid border-0 bg-transparent shadow-none" width="600" alt="Google Lighthouse">
+      </section>
+      <!---
+      TALK:
+      A couple of things to note;
+      - running with Chrome extensions enabled can affect results. For best results run in Incognito mode (with extensions disabled)
+      - The Chrome extension is usually a newer version than the one bundled with Chrome (stable release)
+      -->
+
+
+
+      <section id="sonarwhal">
+        <h2>
+          Microsoft Sonarwhal
+        </h2>
+        <img src="img/sonarwhal.jpg" class="text-center img-fluid border-0 bg-transparent rounded-circle shadow-none" width="200"
+          height="200" alt="Microsoft Sonarwhal">
+        <h6 class="">
+          <a href="https://sonarwhal.com/scanner/" class="text-muted small">
+            https://sonarwhal.com/scanner/
+          </a>
+        </h6>
+      </section>
+      <!--
+        TALK: Similar in many ways to Google's tool but overall I find the UI not as easy to navigate. worth a second try.
+      -->
+
+
+      <section id="webpage-test">
+        <h2>
+          Webpage Test
+        </h2>
+        <img src="img/webpagetest.png" class="text-center img-fluid border-0 bg-transparent shadow-none" width="600" alt="Microsoft Sonarwhal">
+        <h6 class="">
+          <a href="http://www.webpagetest.org/" class="text-muted small">
+            http://www.webpagetest.org/
+          </a>
+        </h6>
+      </section>
+      <!--
+         TALK: This one has been around for a while. Free to use - lots of options for setting custom user agent, can view previous test reports, shows visual comparison.
+      -->
+
+      <section id="platform-specific">
+        <h2>
+          Platform Specific Tips
+        </h2>
+      </section>
+
+
+      <section id="wp">
+        <h2>
+          WordPress
+        </h2>
+        <img src="img/wordpress.png" class="text-center img-fluid rounded-circle border-0 bg-transparent shadow-none" height="400"
+          width="400" alt="WordPress">
+      </section>
+      <!-- WordPress is the world most popular site CMS. -->
+
+
+      <section id="wp-plugins">
+        <h2>
+          WordPress Plugins
+        </h2>
+        <ul>
+          <li class="fragment fade-in">
+            <a href="https://wordpress.org/plugins/wp-smushit/">
+              WP Smush
+            </a>
+          </li>
+          <li class="fragment fade-in">
+            <a href="https://wordpress.org/plugins/use-google-libraries/">
+              Use Google Libraries
+            </a>
+          </li>
+          <li class="fragment fade-in">
+            <a href="https://roots.io/plugins/soil/">
+              Soil by Roots
+            </a>
+          </li>
+        </ul>
+      </section>
+
+
+      <section id="github-pages">
+        <h2>
+          GitHub Pages
+        </h2>
+        <img src="img/github.png" class="text-center img-fluid rounded-circle border-0 bg-light" height="400" width="400" alt="GitHub">
+      </section>
+      <!-- I love GitHub Pages. It's free and super easy to setup a site. After you've created a GitHub account you can have a site at https://yourusername.github.io -->
+
+
+      <section id="cloudflare">
+        <h2 hidden>
+          Cloudflare
+        </h2>
+        <img src="img/cloudflare.png" class="text-center img-fluid rounded-circle bg-white border-0" height="400" width="400" alt="Cloudflare">
+      </section>
+
+
+      <section id="cloudflare-ssl">
+        <h2>
+          Cloudflare
+        </h2>
+        <ul>
+          <ol>
+            <li class="fragment fade-in">Register a domain name</li>
+            <li class="fragment fade-in">Change the Name Servers to point to
+              <a href="https://cloudflare.com">Cloudflare</a>
+            </li>
+            <li class="fragment fade-in">Change DNS A record to point to GitHub Pages</li>
+            <li class="fragment fade-in">Add
+              <code>CNAME</code> file to your repo</li>
+          </ol>
+        </ul>
+      </section>
+
+
+      <section id="advanced-topics">
+        <h2>Advanced Topics</h2>
+        <ul>
+          <li class="fragment fade-in">
+            Service Workers for storing static assets
+          </li>
+          <li class="fragment fade-in">
+            Consider moving to HTTP/2 if your server supports it
+          </li>
+          <li class="fragment fade-in">
+            Use UnCSS to remove all unused CSS from your stylesheets
+          </li>
+        </ul>
+      </section>
+
+
+      <section id="further-reading">
+        <h2>Further Reading</h2>
+        <ul>
+          <li class="fragment fade-in">
+            <a href="https://www.smashingmagazine.com/2018/01/front-end-performance-checklist-2018-pdf-pages/">
+              Smashing Magazine Performance Checklist 2018
+            </a>
+          </li>
+          <li class="fragment fade-in">
+            <a href="https://developers.google.com/web/fundamentals/performance/">
+              Why Performance Matters (by Google)
+            </a>
+          </li>
+        </ul>
+      </section>
+
+
+      <section id="qa">
+        <h1>🤨 Questions?</h1>
+      </section>
+
+      <section id="-">
+        <h1></h1>
+      </section>
+
+      <section id="about">
+        <h2>About These Slides</h2>
+        <ul>
+          <li class="fragment fade-in">
+            Created with
+            <a href="https://revealjs.com/">Reveal.JS</a>
+          </li>
+          <li class="fragment fade-in">
+            Coded with
+            <a href="https://code.visualstudio.com/">Visual Studio Code</a>
+          </li>
+          <li class="fragment fade-in">
+            Font used is
+            <a href="https://fonts.google.com/specimen/Roboto">Roboto Light</a>
+          </li>
+          <li class="fragment fade-in">
+            Hosted on
+            <a href="https://pages.github.com/">GitHub Pages</a>
+          </li>
+          <li class="fragment fade-in">
+            Offline Support with
+            <a href="https://github.com/TalAter/UpUp">UpUp.js</a>
+          </li>
+        </ul>
+      </section>
+
+    </div>
+  </div>
+  <script src="lib/js/head.min.js"></script>
+  <script src="js/reveal.js"></script>
+  <script>
+    Reveal.initialize({
+      fragments: true,
+      dependencies: [
+        { src: 'plugin/markdown/marked.js' },
+        { src: 'plugin/markdown/markdown.js' },
+        { src: 'plugin/notes/notes.js', async: true },
+        { src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } }
+      ]
+    });
+  </script>
+  <script src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/UpUp/1.0.0/upup.min.js"></script>
+  <script>
+    UpUp.start({
+      'cache-version': 'v1.0',
+      'content-url': 'index.html',
+      'assets': ['js/reveal.js', 'lib/js/head.min.js', 'css/reveal.min.css', 'css/theme/black.min.css'],
+      'service-worker-url': 'upup.sw.min.js'
+    });
+  </script>
+</body>
+
+</html>
