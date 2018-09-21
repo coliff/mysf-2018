@@ -7,7 +7,7 @@
   "devDependencies": {
     "grunt": "~1.0.2",
     "grunt-dev-update": "^2.3.0",
-    "load-grunt-tasks": "^3.5.2"
+    "load-grunt-tasks": "^4.0.0"
   },
   "license": "N/A",
   "dependencies": {
